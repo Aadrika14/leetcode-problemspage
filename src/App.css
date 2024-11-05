@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+/* src/App.css */
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.code-section {
+  grid-column: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* src/components/ProblemDescription.css */
+.problem-description {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tags {
+  margin-bottom: 10px;
+}
+
+.tag {
+  padding: 5px 10px;
+  background-color: #4e4646;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.tag.easy { background-color: #828883; }
+
+/* src/components/ActionButtons.css */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.run-btn, .submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.run-btn { background-color: #6c757d; color: white; }
+.submit-btn { background-color: #28a745; color: white; }
+
+/* src/components/OutputDisplay.css */
+.output-display {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
